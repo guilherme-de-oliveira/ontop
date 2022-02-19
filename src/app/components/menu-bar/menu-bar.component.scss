@@ -1,0 +1,38 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    align-items: center;
+    background-color: white;
+    color: #FE5A70;
+    font-weight: 600;
+    box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+  }
+
+
+  :host ::ng-deep {
+    .p-menubar{
+      height: 110px;
+      background: white !important;
+      // color: #495057;
+      border: none !important;
+    }
+
+    .p-menubar ul li{
+      margin-left: 100px;
+    }
+
+    .userPhoto{
+      border-radius: 0;
+      height: 0;
+      width: 0;
+    }
+
+  }
+  .userPhoto {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+  }

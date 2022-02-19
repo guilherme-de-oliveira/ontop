@@ -1,0 +1,143 @@
+
+:host ::ng-deep {
+    .p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
+        display: none;
+    }
+
+    .p-card-body{
+        background-color: #F9F9F9;
+    }
+
+    .p-datatable .p-datatable-tbody > tr{
+        background-color: #F9F9F9;
+        color: #212529;
+        box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+        border-radius: 4px;
+        border-spacing: 3em;
+        padding: 1.5rem;
+    }
+
+    .p-datatable .p-datatable-tbody > tr > td {
+        border: none;
+        padding: 10px 0;
+        text-align: center;
+        border-bottom-width: 10px;
+        padding-bottom: 3em;
+        padding-top: 3em;
+        padding-left: 1em;
+    }
+
+    .p-datatable table {
+        border-collapse: collapse;
+        border-spacing: 0em 3em 0em;
+    }
+
+    .p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
+        display: none;
+    }
+
+    .p-datatable .p-datatable-thead > tr > th {
+        border: none;
+        text-align: center;
+    }
+
+    .p-overlaypanel .p-overlaypanel-content {
+        padding: 0.75rem;
+    }
+    .p-paginator-bottom {
+        color: #212529;
+    }
+    .p-paginator .p-paginator-current {
+        color: #212529;
+    }
+    .p-paginator .p-paginator-pages .p-paginator-page.p-highlight{
+        background: #212529;
+        border-color: #212529;
+    }
+}
+
+.userPhoto {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.type-active{
+    background: #c8e6c9;
+    color: #256029;
+    border-radius: 2px;
+    padding: 0.25em 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+.type-pending{
+    background: #F7DDC1;
+    color: #F29D41;
+    border-radius: 2px;
+    padding: 0.25em 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+hr{
+    border-color: #F9F9F9;
+}
+
+@media screen and (max-width: 40rem) {
+    :host ::ng-deep {
+        .p-datatable {
+            &.p-datatable-responsive-demo {
+                .p-datatable-thead > tr > th,
+                .p-datatable-tfoot > tr > td {
+                    display: none !important;
+                }
+
+                .p-datatable-tbody > tr > td {
+                    text-align: left;
+                    display: block;
+                    width: 100%;
+                    float: left;
+                    clear: left;
+                    border: 0 none;
+                    padding-top: 1px;
+                    padding-bottom: 8px;
+
+                    .p-column-title {
+                        padding: .4rem;
+                        min-width: 30%;
+                        display: inline-block;
+                        margin: -.4em 1em -.4em -.4rem;
+                        font-weight: bold;
+                    }
+
+                    &:last-child {
+                        border-bottom: 1px solid var(--surface-d);
+                    }
+                    .userPhoto {
+                        // border-radius: 50%;
+                        height: 0;
+                        width: 0;
+                    }
+                    .img-table {
+                        display: none;
+                    }
+                }
+                td:nth-child(even) {
+                    background-color: white;
+                }
+            }
+        }
+        
+    }
+    .p-paginator-bottom {
+        color: #212529;
+    }
+    .p-paginator .p-paginator-current {
+        color: #212529;
+    }
+}

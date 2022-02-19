@@ -1,0 +1,76 @@
+
+<p-table 
+    [value]="contractors" 
+    [rowHover]="true" 
+    [responsive]="true"
+    styleClass="p-datatable-responsive-demo"
+    [rows]="10" 
+    [showCurrentPageReport]="true" 
+    [rowsPerPageOptions]="[10,25,50]" 
+    selectionMode="multiple" 
+    [(selection)]="selectedContractors" 
+    [paginator]="true" 
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+    dataKey="code">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th width="3%"></th>
+            <th>Contractor Name</th>
+            <th>Type</th>
+            <th>Start Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th width="10%">Actions</th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" >
+        <tr *ngFor="let contractor of contractors;">
+            <td class="img-table">
+                <img  src="../../../assets/images/{{contractor.image}}" class="userPhoto" />
+            </td>
+            <td><span class="p-column-title">Contract Name</span>{{contractor.name}}</td>
+            <td><span class="p-column-title">Type</span>{{contractor.type}}</td>
+            <td><span class="p-column-title">Start Date</span>{{contractor.startDate}}</td>
+            <td><span class="p-column-title">Amount</span>{{contractor.amount}}</td>
+            <td><span class="p-column-title">Status</span>
+                <span [class]="'type-'+contractor.status.toLowerCase()">{{contractor.statusDescription}}</span>
+            </td>
+            <td><span class="p-column-title">Actions</span>
+                <a (click)="op.toggle($event)">
+                    <span class="p-input-icon-left">
+                        <i [class]="'pi '+width"></i>
+                    </span>
+                </a>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<p-overlayPanel #op [showCloseIcon]="false" [style]="{width: '175px'}">
+    <ng-template pTemplate>
+        <div class="p-grid p-flex-column">
+            <div class="p-col">
+                <div class="box">
+                    <i class="pi pi-pencil"></i> &nbsp;
+                    <span>Edit</span>
+                </div>
+                <hr>
+                <div class="box">
+                    <i class="pi pi-check-square"></i> &nbsp;
+                    <span>Sign</span>
+                </div>
+                <hr>
+                <div class="box">
+                    <i class="pi pi-file"></i> &nbsp;
+                    <span>View Summary</span>
+                </div>
+                <hr>
+                <div class="box">
+                    <i class="pi pi-trash" style="color: #FE5A70;"></i> &nbsp;
+                    <span>Delete</span>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-overlayPanel>

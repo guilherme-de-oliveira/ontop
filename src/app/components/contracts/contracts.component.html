@@ -1,0 +1,65 @@
+
+<div class="welcome-banner">
+    <app-welcome-banner [type]="page"></app-welcome-banner>
+</div>
+<!-- Search Form -->
+<div *ngIf="width > 600; else elseBlock">
+    <div class="p-d-flex p-flex-column p-flex-md-row">
+        <div class="p-col-7 p-mb-7 p-mr-3 p-lg-8 p-sm-12">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText placeholder="Search" class="search-input"/>
+            </span>
+        </div>
+        <div class="p-col-12  p-mr-2 p-lg-1 p-sm-2">
+            <button pButton label="Filter" type="button" icon="pi pi-sliders-h" class="p-button-secondary filter-button"></button>
+        </div>
+        <div class="p-col-12 p-mr-2 p-lg-3 p-sm-2">
+            <button pButton label="New hire" type="button" icon="pi pi-plus" class="new-hire-button"></button>
+        </div>
+    </div>
+</div>
+
+<ng-template #elseBlock>
+<div class="p-grid">
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText placeholder="Search" class="search-input"/>
+        </span>
+    </div>
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <button pButton label="Filter" type="button" icon="pi pi-sliders-h" class="p-button-secondary filter-button"></button>
+        <button pButton label="New hire" type="button" icon="pi pi-plus" class="new-hire-button"></button>
+    </div>
+</div>
+</ng-template>
+
+<!-- Filter Form -->
+<div class="p-d-flex p-flex-column p-flex-md-row filter-form">
+    <div class="p-mb-3 p-mr-3 p-lg-3 p-sm-12">
+        <p-calendar  selectionMode="range" [readonlyInput]="true" inputId="range" placeholder="Select range of dates" icon="pi pi-calendar" size="10"></p-calendar>
+    </div>
+    <div class="p-mb-3 p-mr-3 p-lg-2 p-sm-12">
+        <p-dropdown placeholder="Contractor Name" [style]="{'width': '13em', 'height': '3em'}"></p-dropdown>
+    </div>
+    <div class="p-mb-3 p-mr-3 p-lg-4 p-sm-12">
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText class="contractor-name-search" placeholder="Contractor Name">
+        </span>
+    </div>
+    <div class="p-mb-3 p-mr-3 p-lg-3 p-sm-12">
+        <p-dropdown placeholder="Status" [style]="{'width': '15em', 'height': '3em'}"></p-dropdown>
+    </div>
+</div>
+
+<div class="p-d-flex p-flex-column p-flex-md-row">
+    <div class="p-mb-3 p-col" [style]="{'text-align': 'end'}">
+        <button pButton type="button" icon="pi pi-check" label="Clear fields" class="p-button-danger" ></button>
+    </div>
+</div>
+
+<!-- Contractor's card -->
+<p-card class="contractors-table">
+    <app-contractor-card [contractors]="contractors"></app-contractor-card>
+</p-card>

@@ -1,0 +1,18 @@
+
+<p-sidebar [(visible)]="displayUserInfo" position="right">
+    <p>User Info</p>
+    <p>Change theme</p>
+</p-sidebar>
+<p-menubar [model]="items" class="toolbar">
+    <ng-template pTemplate="start">
+        <a routerLink="home" class="logo-link">
+          <img class="logo-image" src="../../../assets/images/logo-Ontop.svg" width="160" class="p-mr-2">
+        </a>
+      </ng-template>
+      <ng-template pTemplate="end">
+        <a href='#' (click)='showUserInfo()' >
+            <img [alt]="user.name" src="../../../assets/images/{{user.image}}" width="32" class="userPhoto" />
+            <span class="p-submenu-icon pi pi-angle-down"></span>
+        </a>
+    </ng-template>
+</p-menubar>

@@ -1,0 +1,170 @@
+
+.contractors-table{
+    margin: '2em 1em 2em';
+}
+
+.contractor-body{
+    margin: '8em 1em 8em';
+}
+
+:host ::ng-deep {    
+    .p-button{
+        background-color: #FE5A70;
+        box-shadow: 0 1px 1px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+        background: #FE5A70;
+        border: 1px solid #FE5A70;
+        font-weight: bold;
+    }
+
+    .p-button:enabled:hover{
+        background: #d13046;
+        border-color: #d13046;
+        
+    }
+
+    .p-button-secondary{
+        background-color: #EBEBEB !important;
+        box-shadow: 0 1px 1px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+        background: #EBEBEB !important;
+        border: 1px solid #EBEBEB;
+        color: black;
+    }
+    .p-button.p-button-secondary:enabled:hover{
+        background-color: #ebebeb60 !important;
+        box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+        background: #ebebeb60 !important;
+        border: 1px solid #ebebeb60 !important;
+        color: black !important;
+    }
+
+    .p-calendar .p-inputtext{
+        width: 19em !important;
+        height: 3em;
+    }
+
+    .p-dropdown .p-dropdown-label.p-placeholder {
+        transform: translate(0, 10%);
+    }
+
+    .p-dropdown .p-dropdown-label.p-placeholder{
+        text-align: initial;
+    }
+}
+
+// card for table
+.card-container {
+    background-color: #F9F9F9;
+    color: #212529;
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    border-radius: 4px;
+    padding: 1.5rem;
+}
+
+.userPhoto {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.type-active{
+    background: #c8e6c9;
+    color: #256029;
+    border-radius: 2px;
+    padding: 0.25em 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+.search-input {
+    width: 47em !important;
+    height: 4.5em !important;;
+}
+
+.filter-button{
+    width: 8em;
+    height: 4em;
+}
+
+.new-hire-button{
+    width: 14em !important;
+    height: 4em !important;
+    margin-left: 2em;
+    position: absolute;
+}
+
+.contractor-name-search{
+    width: 24em !important;
+    height: 3em !important;
+}
+
+.welcome-banner{
+    text-align: center;
+}
+
+@media screen and (max-width: 40rem) {
+    :host ::ng-deep {
+        .p-datatable {
+            &.p-datatable-responsive-demo {
+                .p-datatable-thead > tr > th,
+                .p-datatable-tfoot > tr > td {
+                    display: none !important;
+                }
+
+                .p-datatable-tbody > tr > td {
+                    text-align: left;
+                    display: block;
+                    width: 100%;
+                    float: left;
+                    clear: left;
+                    border: 0 none;
+
+                    .p-column-title {
+                        padding: .4rem;
+                        min-width: 30%;
+                        display: inline-block;
+                        margin: -.4em 1em -.4em -.4rem;
+                        font-weight: bold;
+                    }
+
+                    &:last-child {
+                        border-bottom: 1px solid var(--surface-d);
+                    }
+                }
+            }
+        }
+        .p-calendar .p-inputtext{
+            width: 19em !important;
+        }
+        .p-dropdown {
+            width: 19em !important;
+        }
+    }
+
+    .search-input {
+        width: 22rem!important;
+        height: 4em !important;
+    }
+
+    .filter-button{
+        // width: 3em;
+        height: 4em;
+    }
+    
+    .new-hire-button{
+        width: 13em !important;
+        position: absolute !important;
+        margin-left: 0.9em;
+        height: 4em !important;
+    }
+
+    .filter-form{
+        text-align: center;
+    }
+
+    .contractor-name-search{
+        width: 19em !important;
+        height: 3em !important;
+    }
+}
